@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import photo from "../assets/photo.png";
+import photo from "../assets/photo.png"
+import photo1 from "../assets/photo1.png"
 
-<img src={photo} alt="Profile" />
+<img src={photo} alt="profile" />
 
 export default function Hero() {
   return (
