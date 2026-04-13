@@ -142,7 +142,7 @@ export default function Hero() {
                 }}
               >
                 <img
-                  src="/My_Portfolio/photo.png"
+                  src={photo}
                   alt="Sourabh Joshi"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
                   onError={(e) => {
