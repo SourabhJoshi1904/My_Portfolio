@@ -7,7 +7,7 @@ export const SKILLS_GRID = [
   { name: "Python",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
   { name: "Git",        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
   { name: "VS Code",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-  { name: "Tailwind",   icon: "/photo1.png", opacity: 100, brightness: 15 },
+  { name: "Tailwind",   icon: "../public/photo1.png", opacity: 100, brightness: 15 },
   { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
 ];
 
@@ -30,6 +30,8 @@ export const PROJECTS = [
     emoji: "🤖",
     accent: "#7c5cfc",
     img: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=80",
+    liveUrl: "",
+    githubUrl: "",
   },
   {
     title: "Movie Search App",
@@ -38,6 +40,8 @@ export const PROJECTS = [
     emoji: "🎬",
     accent: "#e0522a",
     img: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&q=80",
+    liveUrl: "",
+    githubUrl: "",
   },
   {
     title: "Weather Dashboard",
@@ -46,6 +50,8 @@ export const PROJECTS = [
     emoji: "🌤️",
     accent: "#2d9cdb",
     img: "https://images.unsplash.com/photo-1504608524841-42584120d693?w=400&q=80",
+    liveUrl: "",
+    githubUrl: "",
   },
   {
     title: "Portfolio Website",
@@ -54,6 +60,8 @@ export const PROJECTS = [
     emoji: "🌐",
     accent: "#bb6bd9",
     img: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&q=80",
+    liveUrl: "https://sourabhjoshi1904.github.io/My_Portfolio/",
+    githubUrl: "https://github.com/SourabhJoshi1904/My_Portfolio",
   },
 ];
 

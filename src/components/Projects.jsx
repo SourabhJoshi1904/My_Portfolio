@@ -6,6 +6,21 @@ function ProjectCard({ project, index }) {
   const [hovered, setHovered] = useState(false);
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
+  const demoAvailable = Boolean(project.liveUrl);
+  const githubAvailable = Boolean(project.githubUrl);
+  const buttonBaseStyle = {
+    flex: 1,
+    height: 36,
+    borderRadius: 8,
+    cursor: 'pointer',
+    fontSize: 12,
+    fontWeight: 700,
+    fontFamily: "'Outfit',sans-serif",
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textDecoration: 'none',
+  };
 
   return (
     <motion.div
@@ -89,30 +104,40 @@ function ProjectCard({ project, index }) {
 
         {/* Buttons */}
         <div style={{ display: 'flex', gap: 10 }}>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
+          <motion.a
+            href={demoAvailable ? project.liveUrl : undefined}
+            target="_blank"
+            rel="noreferrer"
+            aria-disabled={!demoAvailable}
+            whileHover={demoAvailable ? { scale: 1.05 } : undefined}
             style={{
-              flex: 1, height: 36, borderRadius: 8, border: 'none', cursor: 'pointer',
-              background: project.accent + '22',
-              borderWidth: 1, borderStyle: 'solid', borderColor: project.accent + '55',
-              color: project.accent, fontSize: 12, fontWeight: 700,
-              fontFamily: "'Outfit',sans-serif",
+              ...buttonBaseStyle,
+              pointerEvents: demoAvailable ? 'auto' : 'none',
+              opacity: demoAvailable ? 1 : 0.45,
+              background: demoAvailable ? project.accent + '22' : 'rgba(255,255,255,0.04)',
+              border: `1px solid ${demoAvailable ? project.accent + '55' : 'rgba(255,255,255,0.1)'}`,
+              color: demoAvailable ? project.accent : 'rgba(255,255,255,0.45)',
             }}
           >
             Live Demo
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
+          </motion.a>
+          <motion.a
+            href={githubAvailable ? project.githubUrl : undefined}
+            target="_blank"
+            rel="noreferrer"
+            aria-disabled={!githubAvailable}
+            whileHover={githubAvailable ? { scale: 1.05 } : undefined}
             style={{
-              flex: 1, height: 36, borderRadius: 8, border: 'none', cursor: 'pointer',
+              ...buttonBaseStyle,
+              pointerEvents: githubAvailable ? 'auto' : 'none',
+              opacity: githubAvailable ? 1 : 0.45,
               background: 'rgba(255,255,255,0.06)',
-              borderWidth: 1, borderStyle: 'solid', borderColor: 'rgba(255,255,255,0.12)',
-              color: 'rgba(255,255,255,0.7)', fontSize: 12, fontWeight: 700,
-              fontFamily: "'Outfit',sans-serif",
+              border: '1px solid rgba(255,255,255,0.12)',
+              color: 'rgba(255,255,255,0.7)',
             }}
           >
             GitHub
-          </motion.button>
+          </motion.a>
         </div>
       </div>
     </motion.div>

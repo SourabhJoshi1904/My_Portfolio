@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import photo from "../assets/photo.png";
+
+<img src={photo} alt="Profile" />
 
 export default function Hero() {
   return (
@@ -138,7 +141,7 @@ export default function Hero() {
                 }}
               >
                 <img
-                  src="/photo.png"
+                  src="/My_Portfolio/photo.png"
                   alt="Sourabh Joshi"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
                   onError={(e) => {
