@@ -7,7 +7,7 @@ export const SKILLS_GRID = [
   { name: "Python",     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
   { name: "Git",        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
   { name: "VS Code",    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-  { name: "Tailwind",   icon: <img src={photo1} alt="profile2" />, opacity: 100, brightness: 15 },
+  { name: "Tailwind",   icon: '<img src={photo1} alt="profile2" />', opacity: 100, brightness: 15 },
   { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
 ];
 
