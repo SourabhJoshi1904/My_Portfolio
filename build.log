@@ -1,0 +1,5 @@
+
+> sourabh-joshi-portfolio@1.0.0 build
+> next build ; status=$?; echo EXIT:$status; tail 60 build.log
+
+Invalid project directory provided, no such directory: c:\Users\LENOVO\Desktop\Sourabh's Web Tech Programs\Projects\sourabh-portfolio\;
