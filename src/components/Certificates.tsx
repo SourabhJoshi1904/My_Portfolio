@@ -9,7 +9,6 @@ export type CertificateItem = {
   id: string;
   type: "internship" | "certification";
   title: string;
-  //https://github.com/SourabhJoshi1904/My_Portfolio.git
   organization: string;
   period: string;
   description: string;
